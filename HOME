@@ -17,9 +17,9 @@
         <nav>
             <ul>
                <li><a href="index.html" class="tablinks"><img src="img/DFDSLOGO.png" alt="DFDS Logo" id="logo"></a></li>
-               <li><img src="img/zoek.jpg" alt="zoek knop"></li>
-                <li><a href="form.html" class="tablinks"><img src="img/account.jpg" alt="zoek knop"></a></li>
-                <li><a href="leeslijst.html" class="tablinks"><img src="img/bril.jpg" alt="zoek knop"></a></li>
+               <li><img src="img/zoek.jpg" alt="Zoeken"></li>
+                <li><a href="form.html" class="tablinks"><img src="img/account.jpg" alt="Log In"></a></li>
+                <li><a href="leeslijst.html" class="tablinks"><img src="img/bril.jpg" alt="Leeslijst"></a></li>
             </ul>
         </nav>
 
