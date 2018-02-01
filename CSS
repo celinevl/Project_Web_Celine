@@ -1,0 +1,814 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+    background: none;
+    border: 0;
+    color: inherit;
+    /* cursor: default; */
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    padding: 0;
+    -webkit-appearance: button;
+    /* for input */
+    -webkit-user-select: none;
+    /* for button */
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+
+/*
+  ========================================
+Body
+  ========================================
+*/
+
+@font-face {
+    font-family: 'dfds';
+    src: url(fonts/dfds-light.woff) format("woff2");
+    font-weight: light;
+    font-style: light;
+    font-stretch: light;
+}
+
+@font-face {
+    font-family: 'dfds';
+    src: url(fonts/dfds-bold.woff) format("woff2");
+    font-weight: bold;
+    font-style: bold;
+    font-stretch: bold;
+}
+
+body {
+    background-color: #eef0f1;
+    font-family: "dfds-light";
+    overflow-x: hidden;
+}
+
+
+/*
+  ========================================
+Small Screen
+  ========================================
+*/
+
+@media (max-width: 40em) {
+    header {
+        height: 3.125em;
+        width: 100vw;
+    }
+    ul {
+        height: 3.125em;
+        width: 100vw;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+        ;
+    }
+    nav img {
+        height: 1.563em;
+    }
+    h1 {
+        font-family: "dfds-bold";
+        color: #002b45;
+        font-size: 1em;
+        text-align: center;
+    }
+    .sort {
+        height: 2.18em;
+        width: calc(100vw - 2em);
+        padding: 0 1em;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+        border-top: solid #c6d8e6 2px;
+        border-bottom: solid #c6d8e6 2px;
+    }
+    .sort h2 {
+        font-family: "dfds-bold";
+        color: #002b45;
+        font-size: 1.1em;
+    }
+    .sort p {
+        font-family: "dfds-light";
+        color: #002b45;
+        font-size: 1em;
+    }
+    a {
+        font-family: "dfds-bold";
+        color: #fff;
+        font-size: 1em;
+        text-transform: uppercase;
+        padding: .2em .2em;
+        border: none;
+        background-color: #f6861f;
+    }
+    a:first-child {
+        font-family: "dfds-bold";
+        color: #002b45;
+        font-size: .8em;
+        text-transform: uppercase;
+        padding: .1em .2em;
+        border: none;
+        background-color: transparent;
+    }
+    main {
+        margin-top: 1em;
+        height: auto;
+        width: 100vw;
+        background-color: #eef0f1;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 16.750em auto;
+    }
+    main>section:first-child {
+        grid-column: 1;
+        grid-row: 1;
+        height: 16.750em;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 7em auto;
+    }
+    main>section:first-child>div {
+        grid-column: 1;
+        grid-row: 1;
+        height: 7em;
+        width: 100vw;
+        background-image: url(../img/regenboognatuur.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    main>section:first-child>article {
+        grid-column: 1;
+        grid-row: 2;
+        background-color: #002b45;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    article:first-of-type>h3 {
+        font-family: "dfds-bold";
+        color: #c6d8e6;
+        font-size: 1.7em;
+        text-transform: uppercase;
+    }
+    section:first-child>article:first-of-type>h4 {
+        font-family: "dfds-light";
+        color: #fff;
+        font-size: 1.5em;
+    }
+    main>section {
+        grid-column: 1;
+        grid-row: 2;
+        width: 100vw;
+    }
+    .container article {
+        float: left;
+        height: 15em;
+        width: 80vw;
+        margin: 2.5vh 10vw;
+        background-color: #fff;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 6.25em auto;
+    }
+    .container div:first-of-type {
+        grid-column: 1;
+        grid-row: 1;
+        height: 100%;
+        width: 100%;
+        background-image: url(../img/dream.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    .container p:first-child {
+        grid-column: 1;
+        grid-row: 1;
+        position: absolute;
+        background-color: #f6861f;
+        padding: .4em .4em;
+        font-family: "dfds-light";
+        color: #fff;
+        font-size: 1.1em;
+        text-transform: uppercase;
+    }
+    .socials {
+        grid-column: 1;
+        grid-row: 1;
+        position: absolute;
+        height: 1.25em;
+        width: 80%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 5em;
+        background-color: rgba(0, 45, 69, 0.5);
+        color: #fff;
+        font-family: "dfds-light";
+    }
+    .text-container {
+        grid-column: 1;
+        grid-row: 2;
+        height: 80%;
+        width: 80%;
+        margin: 4% 10%;
+    }
+    .text-container h4 {
+        font-family: "dfds-bold";
+        color: #002b45;
+        font-size: 1.1em;
+        font-weight: bold;
+    }
+    .text-container p {
+        font-family: "dfds-light";
+        color: #002b45;
+        font-size: 1.1em;
+        font-weight: light;
+        margin: .25em 0;
+    }
+}
+
+
+/*
+  ========================================
+Medium Screen
+  ========================================
+*/
+
+@media (max-width: 55em) and (min-width:40em) {
+    header {
+        height: 3.125em;
+        width: 100vw;
+    }
+    ul {
+        height: 3.125em;
+        width: 100vw;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+        ;
+    }
+    nav img {
+        height: 1.563em;
+    }
+    h1 {
+        font-family: "dfds-bold";
+        color: #002b45;
+        font-size: 1.5em;
+        text-align: center;
+    }
+    .sort {
+        height: 2.18em;
+        width: calc(100vw - 2em);
+        padding: 0 1em;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+        border-top: solid #c6d8e6 2px;
+        border-bottom: solid #c6d8e6 2px;
+    }
+    .sort h2 {
+        font-family: "dfds-bold";
+        color: #002b45;
+        font-size: 1.1em;
+    }
+    .sort p {
+        font-family: "dfds-light";
+        color: #002b45;
+        font-size: 1em;
+    }
+    main {
+        margin-top: 1em;
+        height: auto;
+        width: 100vw;
+        background-color: #eef0f1;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 16.750em auto;
+    }
+    main>section:first-child {
+        grid-column: 1;
+        grid-row: 1;
+        height: 16.750em;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 7em auto;
+    }
+    main>section:first-child>div {
+        grid-column: 1;
+        grid-row: 1;
+        height: 7em;
+        width: 100vw;
+        background-image: url(../img/regenboognatuur.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    a {
+        font-family: "dfds-bold";
+        color: #fff;
+        font-size: 1em;
+        text-transform: uppercase;
+        padding: .2em .2em;
+        border: none;
+        background-color: #f6861f;
+    }
+    a:first-child {
+        font-family: "dfds-bold";
+        color: #002b45;
+        font-size: .8em;
+        text-transform: uppercase;
+        padding: .1em .2em;
+        border: none;
+        background-color: transparent;
+    }
+    main>section:first-child>article {
+        grid-column: 1;
+        grid-row: 2;
+        background-color: #002b45;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    article:first-of-type>h3 {
+        font-family: "dfds-bold";
+        color: #c6d8e6;
+        font-size: 1.7em;
+        text-transform: uppercase;
+    }
+    section:first-child>article:first-of-type>h4 {
+        font-family: "dfds-light";
+        color: #fff;
+        font-size: 1.5em;
+    }
+    main>section {
+        grid-column: 1;
+        grid-row: 2;
+        width: 100vw;
+    }
+    .container article {
+        float: left;
+        height: 15em;
+        width: 35vw;
+        margin: 5vh 7vw;
+        background-color: #fff;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 6.25em auto;
+    }
+    .container div:first-of-type {
+        grid-column: 1;
+        grid-row: 1;
+        height: 100%;
+        width: 100%;
+        background-image: url(../img/dream.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    .container p:first-child {
+        grid-column: 1;
+        grid-row: 1;
+        position: absolute;
+        background-color: #f6861f;
+        padding: .4em .4em;
+        font-family: "dfds-light";
+        color: #fff;
+        font-size: .8em;
+        text-transform: uppercase;
+    }
+    .socials {
+        grid-column: 1;
+        grid-row: 1;
+        position: absolute;
+        height: 1.25em;
+        width: 35%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 5em;
+        background-color: rgba(0, 45, 69, 0.5);
+        color: #fff;
+        font-family: "dfds-light";
+    }
+    .text-container {
+        grid-column: 1;
+        grid-row: 2;
+        height: 40%;
+        width: 100%;
+        margin: 1% 1%;
+    }
+    .text-container h4 {
+        font-family: "dfds-bold";
+        color: #002b45;
+        font-size: 1em;
+    }
+    .text-container p {
+        font-family: "dfds-light";
+        color: #002b45;
+        font-size: 1em;
+        margin: .5em 0;
+    }
+}
+
+
+/*
+  ========================================
+Large Screen
+  ========================================
+*/
+
+@media (min-width:55em) {
+    header {
+        height: 5.125em;
+        width: 100vw;
+    }
+    ul {
+        height: 2em;
+        width: 100vw;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    nav img {
+        height: 1.563em;
+    }
+    h1 {
+        font-family: "dfds-bold";
+        color: #002b45;
+        font-size: 2em;
+        text-align: center;
+    }
+    .sort {
+        height: 2.18em;
+        width: calc(100vw - 2em);
+        padding: 0 1em;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+        border-top: solid #c6d8e6 2px;
+        border-bottom: solid #c6d8e6 2px;
+    }
+    .sort h2 {
+        font-family: "dfds-bold";
+        color: #002b45;
+        font-size: 1.1em;
+    }
+    .sort p {
+        font-family: "dfds-light";
+        color: #002b45;
+        font-size: 1em;
+    }
+    main {
+        margin-top: 1em;
+        height: auto;
+        width: 100vw;
+        background-color: #eef0f1;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 16.750em auto;
+    }
+    main>section:first-child {
+        grid-column: 1;
+        grid-row: 1;
+        height: 17em;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 7em auto;
+    }
+    main>section:first-child>div {
+        grid-column: 1;
+        grid-row: 1;
+        height: 7em;
+        width: 100vw;
+        background-image: url(../img/regenboognatuur.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    main>section:first-child>article {
+        grid-column: 1;
+        grid-row: 2;
+        background-color: #002b45;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    article:first-of-type>h3 {
+        font-family: "dfds-bold";
+        color: #c6d8e6;
+        font-size: 1.7em;
+        text-transform: uppercase;
+    }
+    section:first-child>article:first-of-type>h4 {
+        font-family: "dfds-light";
+        color: #fff;
+        font-size: 1.5em;
+    }
+    a {
+        font-family: "dfds-bold";
+        color: #fff;
+        font-size: 1em;
+        text-transform: uppercase;
+        padding: .2em .2em;
+        border: none;
+        background-color: #f6861f;
+    }
+    a:first-child {
+        font-family: "dfds-bold";
+        color: #002b45;
+        font-size: .8em;
+        text-transform: uppercase;
+        padding: .1em .2em;
+        border: none;
+        background-color: transparent;
+    }
+    main>section {
+        grid-column: 1;
+        grid-row: 2;
+        width: 100vw;
+    }
+    .container article {
+        float: left;
+        height: 15em;
+        width: 20vw;
+        margin: 5vh 6vw;
+        background-color: #fff;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 6.25em auto;
+    }
+    .container div:first-of-type {
+        grid-column: 1;
+        grid-row: 1;
+        height: 100%;
+        width: 100%;
+        background-image: url(../img/dream.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    .container p:first-child {
+        grid-column: 1;
+        grid-row: 1;
+        position: absolute;
+        background-color: #f6861f;
+        padding: .4em .4em;
+        font-family: "dfds-light";
+        color: #fff;
+        font-size: .8em;
+        text-transform: uppercase;
+    }
+    .socials {
+        grid-column: 1;
+        grid-row: 1;
+        position: absolute;
+        height: 1.25em;
+        width: 20%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 5em;
+        background-color: rgba(0, 45, 69, 0.5);
+        color: #fff;
+        font-family: "dfds-light";
+    }
+    .text-container {
+        grid-column: 1;
+        grid-row: 2;
+        height: 40%;
+        width: 100%;
+        margin: 1% 1%;
+    }
+    .text-container h4 {
+        font-family: "dfds-bold";
+        color: #002b45;
+        font-size: 1em;
+    }
+    .text-container p {
+        font-family: "dfds-light";
+        color: #002b45;
+        font-size: 1em;
+        margin: .5em 0;
+    }
+}
+
+
+/*
+  ========================================
+Form
+  ========================================
+*/
+
+form {
+    display: flex;
+}
+
+fieldset {
+    font-family: "dfds-light";
+    color: #6d6f71;
+    padding: 2em 2em;
+    background: white;
+    margin: 0 auto;
+}
+
+legend {
+    text-transform: uppercase;
+    color: #6d6f71;
+    font-family: "dfds-bold";
+}
+
+label {
+    display: block;
+    margin: 0.5em;
+    text-align: left;
+}
+
+input:focus {
+    border: solid 2px #f00;
+}
+
+fieldset input:last-child {
+    padding: 0.5em;
+    margin: 0.5em;
+    color: white;
+    text-transform: uppercase;
+}
+
+input {
+    padding: 0.7em;
+    margin: 0.5em;
+    width: 20em;
+}
+
+button {
+    color: grey;
+    padding: 0.2em;
+    margin-left: 0.2em;
+    font-family: "dfds-bold"
+}
+
+.login {
+    background-color: #f6861f;
+    color: white;
+    margin-top: 0.2em;
+    width: 6em;
+}
+
+#zoekknop {
+    color: white;
+    background: #1b5786;
+    width: 5em;
+    height: 2em;
+}
